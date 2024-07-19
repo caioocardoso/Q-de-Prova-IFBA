@@ -1,0 +1,33 @@
+/******************************************************************************
+dos jurados
+*******************************************************************************/
+#include <stdio.h>
+#define TAM 7
+int main()
+{
+    int vet[TAM], aux, media;
+    
+    for(int iCont=0; iCont<TAM; iCont++){
+    	scanf("%d", &vet[iCont]);
+    	printf("Jurado %d deu %d\n", iCont+1, vet[iCont]);
+	}
+	
+	for (int iCont=0; iCont<TAM-1; iCont++){
+		for(int jCont=1; jCont<TAM; jCont++){
+			if(vet[iCont]<vet[jCont]){
+				aux=vet[jCont];
+				vet[jCont]=vet[iCont];
+				vet[iCont]=aux;
+			}
+		}
+	}
+	
+	for(int iCont=0, media=0; iCont<TAM; iCont++){
+		if(vet[iCont]!=0){
+			printf("[%d] ", vet[iCont]);
+    		media+=vet[iCont];
+		}
+	}
+	media=media/5;
+	printf("\na média dos jurados é %d", media);
+}
