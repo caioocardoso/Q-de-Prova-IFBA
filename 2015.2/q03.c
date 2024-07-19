@@ -23,7 +23,7 @@ int main()
     
     for (int jCont=0; jCont<TAM; jCont++){
         scanf("%d", &vet[jCont]);
-        printf("Posicao: %d Inserido: %d", jCont, vet[jCont]);
+        printf("Posicao: %d Inserido: %d\n", jCont+1, vet[jCont]);
     }
     
     for(iCont=0; iCont<TAM; iCont++){
