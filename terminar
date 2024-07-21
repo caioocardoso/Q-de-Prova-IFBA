@@ -22,7 +22,7 @@ int main()
 		}
 	}
 	
-	for(int iCont=0, media=0; iCont<TAM; iCont++){
+	for(int iCont=1, media=0; iCont<TAM-1; iCont++){
 		if(vet[iCont]!=0){
 			printf("[%d] ", vet[iCont]);
     		media+=vet[iCont];
