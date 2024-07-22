@@ -34,6 +34,7 @@ int main()
                         }
                     }if(temp!=0){
                         printf("[%d, %d] ", temp-2, temp);
+                        iCont++;
                     }
                 }
             }
