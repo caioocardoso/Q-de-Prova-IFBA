@@ -8,10 +8,35 @@ programa em questão.
 
 int main()
 {
-    int n, aux;
+    int n, aux, temp;
+    int jCont=3;
     scanf("Numero de pares primos gemeos %d", &n);
     
     for(int iCont=0; iCont<n;){
-        
+        for(; aux==0;){
+            temp=jCont;
+            for(int kCont=2; kCont<jCont && aux==0; kCont++){
+                if(jCont%kCont==0){
+                    aux++;
+                    jCont+=2;
+                    temp=0;
+                }
+            }if(temp!=0){
+                aux=0;
+                jCont+=2;
+                for(; aux==0;){
+                    temp=jCont;
+                    for(int kCont=2; kCont<jCont && aux==0; kCont++){
+                        if(jCont%kCont==0){
+                            aux++;
+                            jCont+=2;
+                            temp=0;
+                        }
+                    }if(temp!=0){
+                        printf("[%d, %d] ", temp-2, temp);
+                    }
+                }
+            }
+        }
     }
 }
