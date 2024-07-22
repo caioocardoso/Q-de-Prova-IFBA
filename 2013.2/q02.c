@@ -6,39 +6,31 @@ programa em questão.
 *******************************************************************************/
 #include <stdio.h>
 
-int main()
-{
-    int n, aux, temp;
-    int jCont=3;
-    scanf("Numero de pares primos gemeos %d", &n);
+int main(){
+    int n, primo1, primo2;
+    int divisor01, divisor02;
+    int iCont, jCont, kCont;
+    primo1=3;
     
-    for(int iCont=0; iCont<n;){
-        aux=0;
-        while(aux==0){
-            temp=jCont;
-            for(int kCont=2; kCont<jCont && aux==0; kCont++){
-                if(jCont%kCont==0){
-                    aux++;
-                    jCont+=2;
-                    temp=0;
-                }
-            }if(temp!=0){
-                aux=0;
-                jCont+=2;
-                while(aux==0){
-                    temp=jCont;
-                    for(int kCont=2; kCont<jCont && aux==0; kCont++){
-                        if(jCont%kCont==0){
-                            aux++;
-                            jCont+=2;
-                            temp=0;
-                        }
-                    }if(temp!=0){
-                        printf("[%d, %d] ", temp-2, temp);
-                        iCont++;
-                    }
-                }
+    scanf("%d", &n);
+    
+    for(iCont=1; iCont<=n;){
+        divisor01=0;
+        divisor02=0;
+        for(jCont=2; jCont<primo1; jCont++){
+            if(primo1%jCont==0)
+                divisor01++;
+        }if(divisor01==0){
+            primo2=primo1+2;
+            for(jCont=2; jCont<primo2; jCont++){
+                if(primo2%jCont==0)
+                    divisor02++;
+            }if(divisor02==0){
+                printf("[%d, %d] ", primo1, primo2);
+                iCont++;
             }
+        }else{
+            primo1+=2;
         }
     }
 }
