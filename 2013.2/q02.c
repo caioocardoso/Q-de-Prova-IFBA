@@ -13,7 +13,8 @@ int main()
     scanf("Numero de pares primos gemeos %d", &n);
     
     for(int iCont=0; iCont<n;){
-        for(; aux==0;){
+        aux=0;
+        while(aux==0){
             temp=jCont;
             for(int kCont=2; kCont<jCont && aux==0; kCont++){
                 if(jCont%kCont==0){
@@ -24,7 +25,7 @@ int main()
             }if(temp!=0){
                 aux=0;
                 jCont+=2;
-                for(; aux==0;){
+                while(aux==0){
                     temp=jCont;
                     for(int kCont=2; kCont<jCont && aux==0; kCont++){
                         if(jCont%kCont==0){
