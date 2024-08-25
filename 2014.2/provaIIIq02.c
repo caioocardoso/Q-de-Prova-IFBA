@@ -11,7 +11,7 @@ valor 3.
 int main()
 {
     char str[MAX_STR];
-    char vogais[10]={'A', 'a', 'e', 'E', 'i', 'I', 'o', 'O', 'u', 'U'};
+    char vogais[11]={"aAeEiIoOuU "};
     int iCont, jCont;
     int encontroconsonantal;
     int qntencontroconsonantal=0;
